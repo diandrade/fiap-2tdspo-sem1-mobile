@@ -1,4 +1,4 @@
-export type statusConsulta =
+export type StatusConsulta =
 | "Agendada"
 | "Confirmada"
 |"Cancelada"

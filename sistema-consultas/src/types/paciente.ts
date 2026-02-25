@@ -1,4 +1,4 @@
-export type paciente ={
+export type Paciente ={
     id: number;
     nome: String;
     cpf: String;
