@@ -1,8 +1,19 @@
-import { registerRootComponent } from 'expo';
+/**
+ * Exportação centralizada dos componentes
+ * 
+ * Permite importar assim:
+ * import { ConsultaCard } from './src/components';
+ * 
+ * Em vez de:
+ * import ConsultaCard from './src/components/ConsultaCard';
+ */
 
-import App from './App';
+export { default as ConsultaCard } from "./src/components/ConsultaCard";
 
-// registerRootComponent calls AppRegistry.registerComponent('main', () => App);
-// It also ensures that whether you load the app in Expo Go or in a native build,
-// the environment is set up appropriately
-registerRootComponent(App);
+/**
+ * Conforme criarmos mais componentes, adicionaremos aqui:
+ * 
+ * export { default as Loading } from "./Loading";
+ * export { default as EmptyState } from "./EmptyState";
+ * export { default as Header } from "./Header";
+ */
