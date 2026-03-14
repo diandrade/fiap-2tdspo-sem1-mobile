@@ -73,7 +73,6 @@ type ConsultaCardProps = {
  * 
  * =============================================================================
  */
-
 export default function ConsultaCard({
   consulta,
   onConfirmar,
@@ -97,7 +96,7 @@ export default function ConsultaCard({
    */
   
   // Formata um número para moeda brasileira (R$ 150,00)
-  function formatarValor(valor: Number): string {
+  function formatarValor(valor: number): string {
     return valor.toLocaleString("pt-BR", {
       style: "currency",
       currency: "BRL",
@@ -142,6 +141,7 @@ export default function ConsultaCard({
         Isso é feito com array de estilos + operador &&
         -----------------------------------------------------------------------
       */}
+
       <View
         style={[
           styles.statusBadge,
@@ -173,8 +173,7 @@ export default function ConsultaCard({
       </View>
 
       {/* 
-
-      -----------------------------------------------------------------------
+        -----------------------------------------------------------------------
         SEÇÃO: PACIENTE
         -----------------------------------------------------------------------
         Mesma lógica, mas repare em uma coisa importante:
@@ -200,7 +199,8 @@ export default function ConsultaCard({
       </View>
 
       {/* 
-        -----------------------------------------------------------------------
+
+      -----------------------------------------------------------------------
         SEÇÃO: DADOS DA CONSULTA
         -----------------------------------------------------------------------
         Aqui usamos as funções auxiliares formatarData() e formatarValor()
@@ -215,8 +215,7 @@ export default function ConsultaCard({
         
         Fica mais legível e fácil de manter!
         -----------------------------------------------------------------------
-
-        */}
+      */}
       <View style={styles.secao}>
         <Text style={styles.label}>📅 Dados da Consulta</Text>
         <Text style={styles.valor}>Data: {formatarData(consulta.data)}</Text>
@@ -260,7 +259,6 @@ export default function ConsultaCard({
         - Nível 2: flexibilidade (às vezes queremos só exibir, sem ações)
         -----------------------------------------------------------------------
       */}
-
       <View style={styles.acoes}>
         {consulta.status === "agendada" && (
           <>
@@ -286,7 +284,8 @@ export default function ConsultaCard({
         )}
 
         {/* 
-          -----------------------------------------------------------------------
+
+        -----------------------------------------------------------------------
           MENSAGENS DE FEEDBACK
           -----------------------------------------------------------------------
           Se a consulta já foi confirmada ou cancelada, mostramos uma mensagem

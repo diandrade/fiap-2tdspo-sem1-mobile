@@ -19,7 +19,7 @@ import { Medico } from "./src/interfaces/medico";
 import { Consulta } from "./src/interfaces/consulta";
 
 // Importando o componente reutilizável
-import ConsultaCard from "./src/components/ConsultaCard";
+import ConsultaCard  from "./src/components/ConsultaCard";
 
 export default function App() {
   // Dados base (simulando o que tínhamos no backend)
