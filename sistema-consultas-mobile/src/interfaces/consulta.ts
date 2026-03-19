@@ -7,7 +7,7 @@ export interface Consulta{
     medico: Medico;
     paciente: Paciente;
     data: Date;
-    valor: Number;
+    valor: number;
     status: StatusConsulta;
     observacoes?: String;
 
