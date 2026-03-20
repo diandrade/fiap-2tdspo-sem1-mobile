@@ -6,7 +6,7 @@ import { Paciente } from "../types/paciente";
 import { Medico } from "../interfaces/medico";
 import { Consulta } from "../interfaces/consulta";
 import { ConsultaCard } from "../components";
-import { globalStyles as styles } from "../styles/app.styles";
+import { globalStyles } from "../styles/app.styles";
 
 export default function Home() {
   const cardiologia: Especialidade = {
@@ -55,13 +55,13 @@ export default function Home() {
     });
   }
 
-  return (
-    <View style={styles.container}>
+    return (
+    <View style={globalStyles.container}>
       <StatusBar style="light" />
-      <ScrollView contentContainerStyle={styles.scrollContent}>
-        <View style={styles.header}>
-          <Text style={styles.titulo}>Sistema de Consultas</Text>
-          <Text style={styles.subtitulo}>Consulta #{consulta.id}</Text>
+      <ScrollView contentContainerStyle={globalStyles.scrollContent}>
+        <View style={globalStyles.header}>
+          <Text style={globalStyles.titulo}>Sistema de Consultas</Text>
+          <Text style={globalStyles.subtitulo}>Consulta #{consulta.id}</Text>
         </View>
         <ConsultaCard
           consulta={consulta}

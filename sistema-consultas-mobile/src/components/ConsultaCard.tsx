@@ -3,7 +3,6 @@ import { View, Text, Button } from "react-native";
 import { Consulta } from "../interfaces/consulta";
 import { styles } from "../styles/consultaCard.styles";
 
-// Type LOCAL (usado apenas aqui)
 type ConsultaCardProps = {
     consulta: Consulta;
     onConfirmar?: () => void;
@@ -16,7 +15,6 @@ export default function ConsultaCard({
     onCancelar,
 }: ConsultaCardProps) {
 
-    // Auxiliar LOCAL - formata valor para R$ 150,00
     function formatarValor(valor: number): string {
         return valor.toLocaleString("pt-BR", {
             style: "currency",
@@ -24,7 +22,6 @@ export default function ConsultaCard({
         });
     }
 
-    // Auxiliar LOCAL - formata data para 25/03/2026
     function formatarData(data: Date): string {
         return data.toLocaleDateString("pt-BR");
     }
