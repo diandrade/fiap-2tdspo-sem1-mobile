@@ -10,5 +10,4 @@ export interface Consulta{
     valor: number;
     status: StatusConsulta;
     observacoes?: String;
-
 }
